@@ -12,6 +12,8 @@ header {
   background: #007bff;
   text-align: right;
   padding: 1.5em;
+  position: sticky;   
+  top: 0; 
 }
 
 @media (max-width: 560px) {
