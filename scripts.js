@@ -4,8 +4,11 @@ window.addEventListener("load",inicio)
 
 let btnContacto = document.getElementById("btn-contacto"); //boton/link del header
 let btnCuerpo = document.getElementById("btn-cuerpo");
+let btnNosotros = document.getElementById("btn-nosotros");
 btnContacto.addEventListener("click",mostrarContacto);
 btnCuerpo.addEventListener("click",mostrarCuerpo);
+btnNosotros.addEventListener("click",mostrarCuerpo);
+
 
 let controlContacto = false
 let controlNosotros = true
