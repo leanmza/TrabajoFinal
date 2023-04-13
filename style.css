@@ -31,10 +31,16 @@ h3 {
   color: #17252a;
 }
 
+.navbar {
+  background-color: #49c5b6;
+}
+.navbar-collapse {
+  justify-content: end;
+}
 header {
   background-color: #49c5b6;
   text-align: right;
-  padding: 1.2em;
+  padding: 0 5%;
   align-items: center;
   position: sticky;
   top: 0;
@@ -52,11 +58,19 @@ header {
 .link:hover {
   font-weight: 700;
 }
+.navbar-toggler {
+  text-decoration: none;
+  padding: 1.7em;
+  color: #17252a !important;
+  font-weight: 600 !important;
+  background-color: #49c5b6 !important;
+  border: none !important;
+}
 
 /* BODY*/
-#presentacion {
-  padding: 8% 8% 0% 10%;
-  height: 100vh;
+.presentacion {
+  padding: 8% 5% 10% 5%;
+  /* height: 90vh; */
   width: 100%;
 }
 
@@ -71,7 +85,7 @@ header {
 .adorno3 {
   font-size: 4em;
   text-align: left;
-  padding: 0.3em 0 0.3em 0;
+  padding: 0.4em 0 0.4em 0;
 }
 .adorno1,
 .adorno3 {
@@ -80,11 +94,6 @@ header {
 
 .adorno2 {
   color: #17252a !important  ;
-}
-
-h1 {
-  padding-top: 5%;
-  font-size: 2.5em;
 }
 
 .nosotros {
@@ -96,6 +105,7 @@ h1 {
   padding-left: 5%;
   font-size: 1.2em;
   font-weight: 600;
+  text-shadow: 6px 5px 15px #17252a;
 }
 
 /* INTEGRANTES */
@@ -103,13 +113,13 @@ h1 {
 .divIntegrantes {
   background-color: #feffff;
   width: 100vw;
-  height: 100vh;
+  padding: 8% 5% 8% 5%;
   display: flex;
   align-items: center;
 }
 
 .integrantes {
-  padding: 7%;
+  padding: 5%;
 }
 
 .marketing .col-lg-4 {
@@ -138,6 +148,7 @@ footer {
   padding: 1em;
   display: flex;
   justify-content: center;
+  padding-inline: 5%;
 }
 
 .linkFooter {
@@ -157,21 +168,21 @@ footer {
 
 /* FORMULARIO */
 
+.contacto {
+  justify-content: center;
+  padding: 8% 5% 8% 5%;
+  align-content: center;
+}
+
 .titulo {
   text-align: center;
-  margin: 5% 0 5% 0;
+  padding: 5% 0 5% 0;
 }
 
 .formulario {
   background-color: #feffff;
   padding: 5%;
   border-radius: 8px;
-}
-#contacto {
-  justify-content: center;
-  padding: 5%;
-  height: 80vh;
-  align-content: center;
 }
 
 input {
@@ -207,19 +218,25 @@ button {
 /* FORMULARIO WIZARD */
 
 .wizardform {
-  padding: 5%;
+  padding: 2% 5% 0 5%;
   justify-content: center;
   align-items: center;
 }
 
 .wizardform h3 {
-  color: #2b7a78 !important;
-  }
-
-.wizardform p {
-color: #17252a  !important;
+  color: #17252a !important;
+  text-transform: uppercase;
+  padding: 2% 0 1% 0;
+  text-align: center;
 }
 
+.wizardform p {
+  color: #17252a !important;
+}
+
+.wizardform .form-floating {
+  margin-top: 1em;
+}
 
 .formularioRow {
   justify-content: center;
@@ -232,6 +249,7 @@ color: #17252a  !important;
 .encabezadoRow {
   text-align: center;
 }
+
 .f1 {
   padding: 5%;
   background: #feffff;
@@ -242,7 +260,7 @@ color: #17252a  !important;
 .f1 h3 {
   margin-top: 0;
   margin-bottom: 5px;
-  text-transform: uppercase;
+  
 }
 
 .f1-steps {
@@ -263,7 +281,7 @@ color: #17252a  !important;
   top: 0;
   left: 0;
   height: 10px;
-  background: #2b7a78 ;
+  background: #2b7a78;
 }
 
 .f1-step {
@@ -391,7 +409,7 @@ input[type="text"]:-ms-input-placeholder,
 input[type="password"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 textarea.form-control:-ms-input-placeholder {
-  color:#17252a;
+  color: #17252a;
 }
 
 input[type="text"]::-webkit-input-placeholder,
@@ -470,4 +488,83 @@ button.btn.btn-previous:focus,
 button.btn.btn-previous:active:focus,
 button.btn.btn-previous.active:focus {
   background: #bbb;
+}
+
+/* MEDIAS QUERYS */
+
+/* TAMAÑO EXTRA PEQUEÑOS   */
+
+@media (min-width: 360px) and (max-width: 575px) {
+  .cuerpo {
+    justify-content: center;
+    display: flex;
+  }
+
+  header {
+    padding: 3% 5%;
+  }
+  .divAdornos {
+    display: grid;
+    justify-content: center;
+    padding: 15% 0 15% 0;
+  }
+  .adorno1,
+  .adorno2,
+  .adorno3 {
+    font-size: 2.8em;
+    text-align: center;
+  }
+
+  .nuestroGrupo {
+    text-align: center;
+    padding-bottom: 20%;
+  }
+  .wizardform {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+  }
+}
+
+/* TAMAÑOS PEQUEÑOS   */
+@media (min-width: 576px) and (max-width: 767px) {
+  header {
+    padding: 3% 5%;
+  }
+  .divNosotros {
+    justify-content: center;
+    display: grid;
+  }
+
+  .adorno1,
+  .adorno2,
+  .adorno3 {
+    text-align: center;
+  }
+
+  .divNosotros {
+    text-align: center;
+  }
+}
+
+/* TAMAÑOS MEDIANOS   */
+@media (min-width: 768px) and (max-width: 991px) {
+  .divNosotros {
+    justify-content: center;
+    display: grid;
+  }
+
+  .adorno1,
+  .adorno2,
+  .adorno3 {
+    text-align: center;
+  }
+
+  .divNosotros {
+    text-align: center;
+  }
+}
+
+/* TAMAÑOS GRANDES  */
+@media (min-width: 992px) {
 }

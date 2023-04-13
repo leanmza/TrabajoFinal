@@ -44,24 +44,55 @@
 
     <div class="container-fluid cabecera" id="cabecera">
       <header
-        class="d-flex flex-wrap justify-content-between mb-4"
+        class="d-flex flex-wrap justify-content-between mb-4 align-content-center"
       >
-        <div class="col-1 imgLogo">
+        <div class="col-xs-12 col-md-2 imgLogo">
           <a
             href="/"
             class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
           >
-          
-          <img src="img/logo_tpf.png" alt="logo" class="logoHeader" />
+            <img src="img/logo_tpf.png" alt="logo" class="logoHeader" />
           </a>
         </div>
-        <div class="col-11 navibar">
-          <a href="#" id="btn-cuerpo" class="link">Home</a>
-          <a href="#integrantes" id="btn-nosotros" class="link">Nosotros</a>
-          <a href="#contacto" id="btn-contacto" class="link">Contacto</a>
-          <a href="#wizardform" id="btn-wizard" class="link">Formulario</a>
-          <a href="#blog" id="btn-wizard" class="link">Blog</a>
-        </div>
+        <nav class="col-xs-12 col-md-10 navbar navbar-expand-md">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              Menu
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav navibar">
+                <a href="#" id="btn-cuerpo" class="link">Home</a>
+                <a href="#integrantes" id="btn-nosotros" class="link"
+                  >Nosotros</a
+                >
+                <a href="#contacto" id="btn-contacto" class="link">Contacto</a>
+                <a href="#wizardform" id="btn-wizard" class="link"
+                  >Contrataciones</a
+                >
+                <a href="#blog" id="btn-wizard" class="link">Blog</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- <div class="col-xs-12 col-md-1 imgLogo">
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+          >
+            <img src="img/logo_tpf.png" alt="logo" class="logoHeader" />
+          </a>
+        </div> -->
       </header>
     </div>
 
@@ -73,14 +104,13 @@
           <!-- PRESENTACIÓN -->
           <div class="col-12 contenedorPresentacion">
             <div class="row presentacionRow">
-             
-              <div class="col-xs-12 col-md-5  divAdornos">
+              <div class="col-xs-12 col-md-12 col-lg-5 divAdornos">
                 <h2 class="adorno1">IDEA</h2>
                 <h2 class="adorno2">DESARROLLO</h2>
                 <h2 class="adorno3">DISEÑO?</h2>
               </div>
 
-              <div class="col-xs-12 col-md-7  divNosotros">
+              <div class="col-xs-12 col-md-12 col-lg-6 col-xl-7 divNosotros">
                 <!-- <h1 id="nosotros" class="nosotros">NUESTRA EMPRESA</h1> -->
 
                 <p class="nuestroGrupo" id="nuestroGrupo">
@@ -94,13 +124,12 @@
           </div>
         </div>
       </div>
-         <!-- INTEGRANTES -->
-        <div class="container-fluid divIntegrantes">
-       
+      <!-- INTEGRANTES -->
+      <div class="container-fluid divIntegrantes">
         <div class="container marketing integrantes" id="integrantes">
           <!-- Three columns of text below the carousel -->
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-xs-12 col-lg-4">
               <svg
                 class="bd-placeholder-img rounded-circle"
                 width="140"
@@ -123,7 +152,7 @@
               </p>
             </div>
             <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
+            <div class="col-xs-12 col-lg-4">
               <svg
                 class="bd-placeholder-img rounded-circle"
                 width="140"
@@ -146,7 +175,7 @@
               </p>
             </div>
             <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
+            <div class="col-xs-12 col-lg-4">
               <svg
                 class="bd-placeholder-img rounded-circle"
                 width="140"
@@ -173,7 +202,6 @@
           <!-- /.row -->
         </div>
       </div>
-     
 
       <!-- FORMULARIO DE CONTACTO -->
       <div id="contacto" class="container-fluid contacto">
@@ -181,10 +209,14 @@
           <h3>DEJANOS UN MENSAJE</h3>
         </div>
 
-        <form class="form-floating row g-3 formulario" id="formulario" method="POST">
+        <form
+          class="form-floating row g-3 formulario"
+          id="formulario"
+          method="POST"
+        >
           <!-- form-floating es para que el placeholder se haga chiquito en el input y no desaparezca -->
           <!-- INPUT NOMBRE-->
-          <div class="col-md-6 form-floating">
+          <div class="col-xs-12 col-md-6 form-floating">
             <input
               type="text"
               class="form-control"
@@ -194,7 +226,7 @@
             <label for="form-control">Nombre</label>
           </div>
           <!-- INPUT MAIL-->
-          <div class="col-md-6 form-floating">
+          <div class="col-xs-12 col-md-6 form-floating">
             <input
               type="email"
               class="form-control"
@@ -222,16 +254,29 @@
 
       <!-- FORMULARIO WIZARD -->
 
+      <!-- <div id="contacto" class="container-fluid contacto">
+        <div class="row titulo">
+          <h3>DEJANOS UN MENSAJE</h3>
+        </div> -->
+
       <div class="container-fluid wizardform" id="wizardform">
+        <div class="row">
+          <h3>Contrata nuestros servicios</h3>
+        </div>
         <div class="row formularioRow">
-          <div class="col-xs-12 col-md-8 col-lg-6">
-            <form role="form" action="" method="POST" class="f1 form-floating" id="formularioWizard">
+          <div class="col-xs-12 col-md-8 col-lg-7">
+            <form
+              role="form"
+              action=""
+              method="POST"
+              class="f1 form-floating"
+              id="formularioWizard"
+            >
               <!-- Encabezado -->
               <div class="row encabezadoRow">
-                <div class="col-xs-12">
-                  <h3>Contrata nuestros servicios</h3>
+               
                   <p>Completa el formulario para contactarnos</p>
-                </div>
+                
                 <!-- LÍNEA DE PROGRESO -->
 
                 <div class="row rowProgreso f1-steps">
@@ -269,44 +314,44 @@
               <!-- CONTENIDO FORMULARIO -->
 
               <div class="preguntasRow">
+                <!-- PRIMER PASO -->
                 <fieldset>
                   <h4>hablanos de tú negocio:</h4>
 
-
-                  <div class="form-group"> 
-                    <label class="sr-only" for="f1-nombre-negocio"
-                    >Nombre del negocio</label
-                  >
-                      <input
+                  <div class="form-floating">
+                    <input
                       type="text"
                       name="f1-nombre-negocio"
-                      placeholder=""      
-                      class="form-control f1-nombre-negocio"
+                      placeholder=""
+                      class="form-control f1-nombre-negocio inputWizard"
                       id="f1-nombre-negocio"
                     />
-              
+                    <label class="labelWizard" for="form-control"
+                      >Nombre del negocio</label
+                    >
                   </div>
-                  
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-rubro">Rubro</label>
+
+                  <div class="form-floating">
                     <input
                       type="text"
                       name="f1-rubro"
                       placeholder=""
-                      class="f1-rubro form-control"
+                      class="f1-rubro form-control inputWizard"
                       id="f1-rubro"
                     />
+                    <label class="labelWizard" for="form-control">Rubro</label>
                   </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-acerca-negocio"
-                      >Contanos acerca de tu negocio</label
-                    >
+
+                  <div class="form-floating">
                     <textarea
                       name="f1-acerca-negocio"
                       placeholder=""
-                      class="f1-acerca-negocio form-control"
+                      class="f1-acerca-negocio form-control inputWizard"
                       id="f1-acerca-negocio"
                     ></textarea>
+                    <label class="labelWizard" for="form-control"
+                      >Contanos acerca de tu negocio</label
+                    >
                   </div>
                   <div class="f1-buttons">
                     <button type="button" class="btn btn-next">
@@ -315,40 +360,46 @@
                   </div>
                 </fieldset>
 
+                <!-- SEGUNDO PASO -->
                 <fieldset>
                   <h4>Cuentanos quien eres</h4>
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-nombre">Nombre</label>
+                  <div class="form-floating">
                     <input
                       type="text"
                       name="f1-nombre"
                       placeholder=""
-                      class="f1-nombre form-control"
+                      class="f1-nombre form-control inputWizard"
                       id="f1-nombre"
                     />
+                    <label class="labelWizard" for="f1-nombre">Nombre</label>
                   </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-apellido">Apellido</label>
+
+                  <div class="form-floating">
                     <input
                       type="text"
                       name="f1-apellido"
                       placeholder=""
-                      class="f1-apellido form-control"
+                      class="f1-apellido form-control inputWizard"
                       id="f1-apellido"
                     />
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-cargo"
-                      >Cargo en el negocio</label
+                    <label class="labelWizard" for="f1-apellido"
+                      >Apellido</label
                     >
+                  </div>
+
+                  <div class="form-floating">
                     <input
                       type="text"
                       name="f1-cargo"
                       placeholder=""
-                      class="f1-cargo form-control"
+                      class="f1-cargo form-control inputWizard"
                       id="f1-cargo"
                     />
+                    <label class="labelWizard" for="f1-cargo"
+                      >Cargo en el negocio</label
+                    >
                   </div>
+
                   <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">
                       Anterior
@@ -359,39 +410,42 @@
                   </div>
                 </fieldset>
 
+                <!-- TERCER PASO -->
                 <fieldset>
                   <h4>Dejanos tu info de contacto</h4>
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-email">Email</label>
+                  <div class="form-floating">
                     <input
                       type="text"
                       name="f1-email"
                       placeholder=""
-                      class="f1-email form-control"
+                      class="f1-email form-control inputWizard"
                       id="f1-email"
                     />
+                    <label class="labelWizard" for="f1-email">Email</label>
                   </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-whatsapp">Whatsapp</label>
+                  <div class="form-floating">
                     <input
                       type="text"
                       name="f1-whatsapp"
                       placeholder=""
-                      class="f1-whatsapp form-control"
+                      class="f1-whatsapp form-control inputWizard"
                       id="f1-whatsapp"
                     />
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="f1-redes"
-                      >Redes, facebook, instagram, etc.</label
+                    <label class="labelWizard" for="f1-whatsapp"
+                      >Whatsapp</label
                     >
+                  </div>
+                  <div class="form-floating">
                     <input
                       type="text"
                       name="f1-redes"
                       placeholder=""
-                      class="f1-redes form-control"
+                      class="f1-redes form-control inputWizard"
                       id="f1-redes"
                     />
+                    <label class="labelWizard" for="f1-redes"
+                      >Redes, facebook, instagram, etc.</label
+                    >
                   </div>
                   <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">
@@ -407,10 +461,7 @@
       </div>
 
       <!-- BLOG / COMENTARIOS -->
-      <div id="blog" class="container-fluid">
-
-        
-      </div>
+      <div id="blog" class="container-fluid"></div>
     </main>
 
     <!-- FOOTER -->
@@ -450,7 +501,6 @@
     </div>
 
     <script src="scripts.js"></script>
-
 
     <!-- <script>
       const blog = document.querySelector("#blog");
