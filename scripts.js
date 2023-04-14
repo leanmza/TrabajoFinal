@@ -1,18 +1,20 @@
 let contacto = document.getElementById("contacto"); //div de contacto
 let cuerpo = document.getElementById("cuerpo");
 let formulario = document.getElementById("wizardform");
-// let blog = document.getElementById("blog");
+let blog = document.getElementById("blog");
 window.addEventListener("load", inicio);
 
 let btnContacto = document.getElementById("btn-contacto"); //boton/link del header
 let btnCuerpo = document.getElementById("btn-cuerpo");
 let btnNosotros = document.getElementById("btn-nosotros");
 let btnWizard = document.getElementById("btn-wizard");
+let btnBlog = document.getElementById("btn-blog");
 
 btnContacto.addEventListener("click", mostrarContacto);
 btnCuerpo.addEventListener("click", mostrarCuerpo);
 btnNosotros.addEventListener("click", mostrarCuerpo);
 btnWizard.addEventListener("click", mostrarFormulario);
+btnBlog.addEventListener("click", mostrarBlog);
 
 function inicio() {
   contacto.style.display = "none";
@@ -23,22 +25,26 @@ function mostrarContacto() {
   contacto.style.display = "grid";
   cuerpo.style.display = "none";
   formulario.style.display = "none";
+  blog.style.display = "none";
 }
 function mostrarCuerpo() {
   contacto.style.display = "none";
   cuerpo.style.display = "block";
   formulario.style.display = "none";
+  blog.style.display = "none";
 }
 function mostrarFormulario() {
   contacto.style.display = "none";
   cuerpo.style.display = "none";
   formulario.style.display = "block";
+  blog.style.display = "none";
 }
 
 function mostrarBlog() {
   contacto.style.display = "none";
   cuerpo.style.display = "none";
-  formulario.style.display = "block";
+  formulario.style.display = "none";
+  blog.style.display = "block";
 }
 
 
@@ -64,9 +70,7 @@ function bar_progress(progress_line_object, direction) {
 }
 
 $(document).ready(function () {
- 
-	
-	/*
+  /*
         Form
     */
   $(".f1 fieldset:first").fadeIn("slow");
@@ -98,7 +102,6 @@ $(document).ready(function () {
           $(this).removeClass("input-error");
         }
       });
-
 
     // fields validation
 
@@ -158,7 +161,6 @@ $(document).ready(function () {
         }
       });
     // fields validation
-   
   });
 });
 
@@ -168,7 +170,32 @@ $(document).ready(function () {
   });
 });
 
-
 // API
 
+const comentarioAPI = document.querySelector("#comentarioAPI");
 
+const comentarios = fetch("https://dummyjson.com/comments?limit=9");
+
+comentarios
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data.comments);
+
+    for (const elemento of data.comments) {
+      // itero el array data con un for of que crea
+      // un objeto temporal de nombre elemento
+      console.log(data);
+      const nuevoDiv = document.createElement("div"); //creo un nuevo div para contener el resto del codigo
+      nuevoDiv.setAttribute("class", "col");
+      nuevoDiv.innerHTML = ` 
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">${elemento.user.username}</h5>
+         <p class="card-text">
+           ${elemento.body}
+          </p>
+        </div>
+      </div> `;
+      comentarioAPI.appendChild(nuevoDiv); //inserto el nuevo div con todos los datos extraidos del array
+    }
+  });

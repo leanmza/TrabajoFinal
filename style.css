@@ -105,8 +105,10 @@ header {
   padding-left: 5%;
   font-size: 1.2em;
   font-weight: 600;
-  text-shadow: 6px 5px 15px #17252a;
+  text-shadow: 0px 1px 4px #17252a;
+
 }
+
 
 /* INTEGRANTES */
 
@@ -490,6 +492,29 @@ button.btn.btn-previous.active:focus {
   background: #bbb;
 }
 
+/* REVIEWS */
+.blog{
+  padding: 5% 5% 8% 5% !important;
+}
+.card-body{
+  background-color: #def2f1 !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card-title{
+  color: #2b7a78 !important;
+  font-weight: 600;
+ 
+} 
+.card-text{
+  color: #17252a !important;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400 ;
+ }
+
+
+ 
 /* MEDIAS QUERYS */
 
 /* TAMAÑO EXTRA PEQUEÑOS   */
