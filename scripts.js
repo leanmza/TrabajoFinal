@@ -214,7 +214,7 @@ comentarios
         <div class="card-body">
           <h5 class="card-title">${elemento.user.username}</h5>
          <p class="card-text">
-           ${elemento.body}
+           "${elemento.body}"
           </p>
         </div>
       </div> `;
