@@ -1,5 +1,6 @@
 let contacto = document.getElementById("contacto"); //div de contacto
 let cuerpo = document.getElementById("cuerpo");
+let integrantesSP = document.getElementById("integrantesSP");
 let formulario = document.getElementById("wizardform");
 let blog = document.getElementById("blog");
 window.addEventListener("load", inicio);
@@ -19,23 +20,27 @@ btnBlog.addEventListener("click", mostrarBlog);
 function inicio() {
   contacto.style.display = "none";
   formulario.style.display = "none";
+  blog.style.display = "none";
 }
 
 function mostrarContacto() {
   contacto.style.display = "grid";
   cuerpo.style.display = "none";
+  integrantesSP.style.display = "none";
   formulario.style.display = "none";
   blog.style.display = "none";
 }
 function mostrarCuerpo() {
   contacto.style.display = "none";
   cuerpo.style.display = "block";
+  integrantesSP.style.display = "block";
   formulario.style.display = "none";
   blog.style.display = "none";
 }
 function mostrarFormulario() {
   contacto.style.display = "none";
   cuerpo.style.display = "none";
+  integrantesSP.style.display = "none";
   formulario.style.display = "block";
   blog.style.display = "none";
 }
@@ -43,6 +48,7 @@ function mostrarFormulario() {
 function mostrarBlog() {
   contacto.style.display = "none";
   cuerpo.style.display = "none";
+  integrantesSP.style.display = "none";
   formulario.style.display = "none";
   blog.style.display = "block";
 }
@@ -70,9 +76,25 @@ function bar_progress(progress_line_object, direction) {
 }
 
 $(document).ready(function () {
-  /*
-        Form
-    */
+  $('form[id="formulario"]').validate({ 
+    rules: {
+      nombre: 'required',
+      correo: {
+        required: true,
+        email: true,
+      },
+      comentario: 'required',
+    },
+    messages: {
+      nombre: 'Este campo es obligatorio',
+      correo: 'Ingrese un correo electronico válido',
+      comentario: 'Este campo es obligatorio',
+    },
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+
   $(".f1 fieldset:first").fadeIn("slow");
 
   $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on(

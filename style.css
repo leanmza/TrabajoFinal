@@ -216,6 +216,20 @@ button {
   left: 0 !important;
   width: 0 !important;
 }
+.error {
+  opacity: 1 !important;
+  color: red;
+  font-weight: 400;
+}
+#nombre-error {
+  margin-left: 75px;
+}
+#correo-error {
+  margin-left: 60px;
+}
+#comentario-error {
+  margin-left: 150px;
+}
 
 /* FORMULARIO WIZARD */
 

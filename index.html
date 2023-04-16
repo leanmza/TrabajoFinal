@@ -31,6 +31,7 @@
 
     <!-- JQUERYS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
     <!-- FONT AWESOME PARA LOS ICONOS -->
     <script
@@ -116,7 +117,7 @@
         </div>
       </div>
       <!-- INTEGRANTES -->
-      <div class="container-fluid divIntegrantes">
+      <div class="container-fluid divIntegrantes" id="integrantesSP">
         <div class="container marketing integrantes" id="integrantes">
           <!-- Three columns of text below the carousel -->
           <div class="row">
@@ -203,7 +204,8 @@
         <form
           class="form-floating row g-3 formulario"
           id="formulario"
-          method="POST"
+          method="post" 
+          action=""
         >
           <!-- form-floating es para que el placeholder se haga chiquito en el input y no desaparezca -->
           <!-- INPUT NOMBRE-->
@@ -212,19 +214,21 @@
               type="text"
               class="form-control"
               id="nombre"
-              placeholder="Nombre"
+              name="nombre"
+              placeholder=""
             />
-            <label for="form-control">Nombre</label>
+            <label for="nombre">Nombre</label>
           </div>
           <!-- INPUT MAIL-->
           <div class="col-xs-12 col-md-6 form-floating">
             <input
-              type="email"
+              type="text"
               class="form-control"
-              id="email"
-              placeholder="Email"
+              id="correo"
+              placeholder=""
+              name="correo"
             />
-            <label for="form-control">Email</label>
+            <label for="correo">Email</label>
           </div>
           <!-- INPUT COMENTARIOS-->
           <div class="col-md-12 form-floating">
@@ -232,13 +236,14 @@
               type="text"
               class="form-control"
               id="comentario"
-              placeholder="Escribí tu mensaje"
+              placeholder=""
+              name="comentario"
             ></textarea>
-            <label for="form-control">Escribí tu mensaje</label>
+            <label for="comentario">Escribí tu mensaje</label>
           </div>
 
           <div class="col-xs-12 btnEnviar">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" name= "submit" value= "enviar" class="btn btn-primary">Enviar</button>
           </div>
         </form>
       </div>
