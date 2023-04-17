@@ -30,6 +30,7 @@
     />
 
     <!-- JQUERYS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
@@ -139,8 +140,9 @@
 
               <h3>Matias Villosio</h3>
               <p>
-                Some representative placeholder content for the three columns of
-                text below the carousel. This is the first column.
+                Desarrollador Backend especializado en JavaScript, es el
+                encargado de que las páginas funcionen rápido y los datos no se
+                pierdan por ahí.
               </p>
             </div>
             <!-- /.col-lg-4 -->
@@ -162,8 +164,8 @@
 
               <h3>Emanuel Fernández</h3>
               <p>
-                Another exciting bit of representative placeholder content. This
-                time, we've moved on to the second column.
+                Desarrollador frontend, se encarga del maqueteado de las Apps y
+                también de la comunicación y uso de las APIs.
               </p>
             </div>
             <!-- /.col-lg-4 -->
@@ -185,9 +187,10 @@
 
               <h3>Leandro Hidalgo</h3>
               <p>
-                And lastly this, the third column of representative placeholder
-                content.
+                Diseñador UX/IX, su trabajo es cuidar que las APPs tengan un
+                buen diseño y que sean dinámicas e intuitivas para los usuarios.
               </p>
+              
             </div>
             <!-- /.col-lg-4 -->
           </div>
@@ -204,7 +207,7 @@
         <form
           class="form-floating row g-3 formulario"
           id="formulario"
-          method="post" 
+          method="post"
           action=""
         >
           <!-- form-floating es para que el placeholder se haga chiquito en el input y no desaparezca -->
@@ -243,7 +246,14 @@
           </div>
 
           <div class="col-xs-12 btnEnviar">
-            <button type="submit" name= "submit" value= "enviar" class="btn btn-primary">Enviar</button>
+            <button
+              type="submit"
+              name="submit"
+              value="enviar"
+              class="btn btn-primary"
+            >
+              Enviar
+            </button>
           </div>
         </form>
       </div>
@@ -441,7 +451,29 @@
                     <button type="button" class="btn btn-previous">
                       Anterior
                     </button>
-                    <button type="submit" class="btn btn-submit">Enviar</button>
+                    <button
+                      type="submit"
+                      class="btn btn-submit"
+                      onclick=" $(function () { 
+                      var doc = new jsPDF()
+                      doc.text('Formulario Completado', 5, 10)
+                      doc.text('Nombre Negocio:\t\t'+document.querySelector(`#f1-nombre-negocio`).value, 10, 100)
+                      doc.text('Rubro Negocio:\t\t'+document.querySelector(`#f1-rubro`).value, 10, 110)
+                      doc.text('Info Negocio:\t'+document.querySelector(`#f1-acerca-negocio`).value, 10, 120, { align: 'justify', lineHeightFactor: 1.5, maxWidth: 180 })
+
+                      doc.text('Nombre:\t\t'+document.querySelector(`#f1-nombre`).value, 10, 60)
+                      doc.text('Apellido:\t\t'+document.querySelector(`#f1-apellido`).value, 10, 70)
+                      doc.text('Cargo:\t\t'+document.querySelector(`#f1-cargo`).value, 10, 80)
+
+                      doc.text('E-Mail:\t\t'+document.querySelector(`#f1-email`).value, 10, 20)
+                      doc.text('Whatsapp:\t\t'+document.querySelector(`#f1-whatsapp`).value, 10, 30)
+                      doc.text('Redes:\t\t'+document.querySelector(`#f1-redes`).value, 10, 40)
+                      
+                      doc.save('a4.pdf')
+                           });"
+                    >
+                      Enviar
+                    </button>
                   </div>
                 </fieldset>
               </div>
@@ -455,7 +487,7 @@
         <div class="row titulo">
           <h3>COMENTARIOS DE CLIENTES</h3>
         </div>
-        <div class="row row-cols-1 row-cols-md-3  g-4" id="comentarioAPI">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="comentarioAPI">
           <!-- Aca se van a cargar las cards de los comentarios -->
         </div>
       </div>

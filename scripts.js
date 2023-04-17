@@ -4,6 +4,7 @@ let integrantesSP = document.getElementById("integrantesSP");
 let formulario = document.getElementById("wizardform");
 let blog = document.getElementById("blog");
 window.addEventListener("load", inicio);
+window.jsPDF = window.jspdf.jsPDF;
 
 let btnContacto = document.getElementById("btn-contacto"); //boton/link del header
 let btnCuerpo = document.getElementById("btn-cuerpo");
